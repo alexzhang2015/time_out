@@ -39,7 +39,9 @@
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
-    [NSApp sendAction:self.action to:self.target from:self];
+//    [NSApp sendAction:self.action to:self.target from:self];
+    NSLog(@"mouseDown");
 }
+
 
 @end

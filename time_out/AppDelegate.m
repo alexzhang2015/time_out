@@ -34,10 +34,16 @@
     
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
+    
+    // http://stackoverflow.com/questions/620841/how-to-hide-the-dock-icon
+    [NSApp setActivationPolicy: NSApplicationActivationPolicyAccessory];
 }
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    NSLog(@"applicationDidFinishLaunching");
     
     NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:TIME_INTERVAL_SINCE_NOW];
     
