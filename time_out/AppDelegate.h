@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) MenuBarController *menuBarController;
 
+- (IBAction)ok:(id)sender;
+
 - (void)sendUserNotification:(NSTimer*)theTimer;
 
 @end

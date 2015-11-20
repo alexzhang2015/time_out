@@ -8,13 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface StatusItemView : NSView
+@class INPopoverController;
+@interface StatusItemView : NSView{
+@private
+    NSWindow *__weak window;
+    INPopoverController *popoverController;
+}
 
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) NSImage *imageDefault;
 
 @property (nonatomic, unsafe_unretained) id target;
 @property (nonatomic) SEL action;
+
+@property (nonatomic, strong) INPopoverController *popoverController;
 
 - (id)initWithStatusItem:(NSStatusItem *)statusItemParam;
 

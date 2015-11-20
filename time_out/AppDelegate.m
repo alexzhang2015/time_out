@@ -58,6 +58,7 @@
     
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
+    
 
 }
 
@@ -96,8 +97,6 @@
 - (IBAction)ok:(id)sender
 {
     NSLog(@"ok");
-    [self presentNotification];
-    
 }
 
 

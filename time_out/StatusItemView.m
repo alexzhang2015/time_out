@@ -7,17 +7,24 @@
 //
 
 #import "StatusItemView.h"
+#import "ContentViewController.h"
+#import "INPopoverController.h"
 
 @implementation StatusItemView
 @synthesize statusItem;
 @synthesize imageDefault;
 @synthesize action;
+@synthesize popoverController;
 
 - (id)initWithStatusItem:(NSStatusItem *)statusItemParam {
     CGFloat itemWidth = [statusItem length];
     CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
     NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
     self = [super initWithFrame:itemRect];
+    
+    // load the ContentViewController
+    ContentViewController *viewController = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    self.popoverController = [[INPopoverController alloc] initWithContentViewController:viewController];
     
     if (self) {
         statusItem = statusItemParam;
@@ -39,9 +46,20 @@
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
-//    [NSApp sendAction:self.action to:self.target from:self];
     NSLog(@"mouseDown");
+    
+    if (self.popoverController.popoverIsVisible) {
+        [self.popoverController closePopover:nil];
+    } else {
+        [self.popoverController presentPopoverFromRect:[self bounds]
+                                                inView:self
+                               preferredArrowDirection:INPopoverArrowDirectionDown
+                                 anchorsToPositionView:YES];
+    }
 }
 
+- (void)rightMouseDown:(NSEvent *)theEvent {
+    NSLog(@"rightMouseDown");
+}
 
 @end

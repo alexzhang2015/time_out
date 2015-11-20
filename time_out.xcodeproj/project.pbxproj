@@ -10,6 +10,13 @@
 		FA5AF68A1BFCFC1100548011 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6891BFCFC1100548011 /* MenuBarController.m */; };
 		FA5AF68D1BFCFC3F00548011 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF68C1BFCFC3F00548011 /* StatusItemView.m */; };
 		FA5AF6961BFD0E2000548011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5AF6951BFD0E2000548011 /* Main.storyboard */; };
+		FA5AF6A61BFE2F8800548011 /* INPopoverController-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5AF69B1BFE2F8800548011 /* INPopoverController-Info.plist */; };
+		FA5AF6A71BFE2F8800548011 /* INPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF69D1BFE2F8800548011 /* INPopoverController.m */; };
+		FA5AF6A81BFE2F8800548011 /* INPopoverParentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6A01BFE2F8800548011 /* INPopoverParentWindow.m */; };
+		FA5AF6A91BFE2F8800548011 /* INPopoverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6A31BFE2F8800548011 /* INPopoverWindow.m */; };
+		FA5AF6AA1BFE2F8800548011 /* INPopoverWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6A51BFE2F8800548011 /* INPopoverWindowFrame.m */; };
+		FA5AF6AC1BFE304D00548011 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5AF6AB1BFE304D00548011 /* ContentViewController.xib */; };
+		FA5AF6AF1BFE31C100548011 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6AE1BFE31C100548011 /* ContentViewController.m */; };
 		FACAC5151BFC28F000093B1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAC5141BFC28F000093B1B /* AppDelegate.m */; };
 		FACAC5181BFC28F000093B1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAC5171BFC28F000093B1B /* main.m */; };
 		FACAC51B1BFC28F000093B1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAC51A1BFC28F000093B1B /* ViewController.m */; };
@@ -41,6 +48,20 @@
 		FA5AF68B1BFCFC3F00548011 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		FA5AF68C1BFCFC3F00548011 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 		FA5AF6951BFD0E2000548011 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FA5AF69B1BFE2F8800548011 /* INPopoverController-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "INPopoverController-Info.plist"; path = "INPopoverController/INPopoverController-Info.plist"; sourceTree = "<group>"; };
+		FA5AF69C1BFE2F8800548011 /* INPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverController.h; path = INPopoverController/INPopoverController.h; sourceTree = "<group>"; };
+		FA5AF69D1BFE2F8800548011 /* INPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPopoverController.m; path = INPopoverController/INPopoverController.m; sourceTree = "<group>"; };
+		FA5AF69E1BFE2F8800548011 /* INPopoverControllerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverControllerDefines.h; path = INPopoverController/INPopoverControllerDefines.h; sourceTree = "<group>"; };
+		FA5AF69F1BFE2F8800548011 /* INPopoverParentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverParentWindow.h; path = INPopoverController/INPopoverParentWindow.h; sourceTree = "<group>"; };
+		FA5AF6A01BFE2F8800548011 /* INPopoverParentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPopoverParentWindow.m; path = INPopoverController/INPopoverParentWindow.m; sourceTree = "<group>"; };
+		FA5AF6A11BFE2F8800548011 /* INPopoverPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverPrefixHeader.pch; path = INPopoverController/INPopoverPrefixHeader.pch; sourceTree = "<group>"; };
+		FA5AF6A21BFE2F8800548011 /* INPopoverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverWindow.h; path = INPopoverController/INPopoverWindow.h; sourceTree = "<group>"; };
+		FA5AF6A31BFE2F8800548011 /* INPopoverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPopoverWindow.m; path = INPopoverController/INPopoverWindow.m; sourceTree = "<group>"; };
+		FA5AF6A41BFE2F8800548011 /* INPopoverWindowFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPopoverWindowFrame.h; path = INPopoverController/INPopoverWindowFrame.h; sourceTree = "<group>"; };
+		FA5AF6A51BFE2F8800548011 /* INPopoverWindowFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPopoverWindowFrame.m; path = INPopoverController/INPopoverWindowFrame.m; sourceTree = "<group>"; };
+		FA5AF6AB1BFE304D00548011 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		FA5AF6AD1BFE31C100548011 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		FA5AF6AE1BFE31C100548011 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		FACAC5101BFC28F000093B1B /* time_out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = time_out.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACAC5131BFC28F000093B1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FACAC5141BFC28F000093B1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,9 +104,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5AF69A1BFE2F7800548011 /* INPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				FA5AF69B1BFE2F8800548011 /* INPopoverController-Info.plist */,
+				FA5AF69C1BFE2F8800548011 /* INPopoverController.h */,
+				FA5AF69D1BFE2F8800548011 /* INPopoverController.m */,
+				FA5AF69E1BFE2F8800548011 /* INPopoverControllerDefines.h */,
+				FA5AF69F1BFE2F8800548011 /* INPopoverParentWindow.h */,
+				FA5AF6A01BFE2F8800548011 /* INPopoverParentWindow.m */,
+				FA5AF6A11BFE2F8800548011 /* INPopoverPrefixHeader.pch */,
+				FA5AF6A21BFE2F8800548011 /* INPopoverWindow.h */,
+				FA5AF6A31BFE2F8800548011 /* INPopoverWindow.m */,
+				FA5AF6A41BFE2F8800548011 /* INPopoverWindowFrame.h */,
+				FA5AF6A51BFE2F8800548011 /* INPopoverWindowFrame.m */,
+			);
+			name = INPopoverController;
+			sourceTree = "<group>";
+		};
 		FACAC5071BFC28F000093B1B = {
 			isa = PBXGroup;
 			children = (
+				FA5AF69A1BFE2F7800548011 /* INPopoverController */,
 				FACAC5121BFC28F000093B1B /* time_out */,
 				FACAC5291BFC28F000093B1B /* time_outTests */,
 				FACAC5341BFC28F000093B1B /* time_outUITests */,
@@ -106,6 +146,9 @@
 		FACAC5121BFC28F000093B1B /* time_out */ = {
 			isa = PBXGroup;
 			children = (
+				FA5AF6AD1BFE31C100548011 /* ContentViewController.h */,
+				FA5AF6AE1BFE31C100548011 /* ContentViewController.m */,
+				FA5AF6AB1BFE304D00548011 /* ContentViewController.xib */,
 				FA5AF6951BFD0E2000548011 /* Main.storyboard */,
 				FA5AF68B1BFCFC3F00548011 /* StatusItemView.h */,
 				FA5AF68C1BFCFC3F00548011 /* StatusItemView.m */,
@@ -257,6 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5AF6AC1BFE304D00548011 /* ContentViewController.xib in Resources */,
+				FA5AF6A61BFE2F8800548011 /* INPopoverController-Info.plist in Resources */,
 				FACAC51D1BFC28F000093B1B /* Assets.xcassets in Resources */,
 				FA5AF6961BFD0E2000548011 /* Main.storyboard in Resources */,
 			);
@@ -284,9 +329,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5AF68A1BFCFC1100548011 /* MenuBarController.m in Sources */,
+				FA5AF6A81BFE2F8800548011 /* INPopoverParentWindow.m in Sources */,
 				FACAC51B1BFC28F000093B1B /* ViewController.m in Sources */,
 				FACAC5181BFC28F000093B1B /* main.m in Sources */,
 				FA5AF68D1BFCFC3F00548011 /* StatusItemView.m in Sources */,
+				FA5AF6AA1BFE2F8800548011 /* INPopoverWindowFrame.m in Sources */,
+				FA5AF6AF1BFE31C100548011 /* ContentViewController.m in Sources */,
+				FA5AF6A71BFE2F8800548011 /* INPopoverController.m in Sources */,
+				FA5AF6A91BFE2F8800548011 /* INPopoverWindow.m in Sources */,
 				FACAC5151BFC28F000093B1B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
