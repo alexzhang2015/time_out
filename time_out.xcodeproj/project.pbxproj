@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA39D1B41C04BC680064C4E6 /* ATLoginItemHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA88F1E21C04B28700799543 /* ATLoginItemHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA5AF68A1BFCFC1100548011 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF6891BFCFC1100548011 /* MenuBarController.m */; };
 		FA5AF68D1BFCFC3F00548011 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5AF68C1BFCFC3F00548011 /* StatusItemView.m */; };
 		FA5AF6961BFD0E2000548011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5AF6951BFD0E2000548011 /* Main.storyboard */; };
@@ -26,6 +27,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA88F1E11C04B28700799543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E8694761AC28CD8008D292D;
+			remoteInfo = ATLoginItemHelper;
+		};
+		FA88F1E31C04B28700799543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E8694891AC28CD8008D292D;
+			remoteInfo = ATLoginItemHelperTests;
+		};
+		FAB4BA9D1C04CD8F00A8FEDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E8694751AC28CD8008D292D;
+			remoteInfo = ATLoginItemHelper;
+		};
 		FACAC5271BFC28F000093B1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FACAC5081BFC28F000093B1B /* Project object */;
@@ -41,6 +63,19 @@
 			remoteInfo = time_out;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA39D1B11C04BC500064C4E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				FA39D1B41C04BC680064C4E6 /* ATLoginItemHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA5AF6881BFCFC1100548011 /* MenuBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarController.h; sourceTree = "<group>"; };
@@ -62,6 +97,7 @@
 		FA5AF6AB1BFE304D00548011 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		FA5AF6AD1BFE31C100548011 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		FA5AF6AE1BFE31C100548011 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ATLoginItemHelper.xcodeproj; path = ATLoginItemHelper/ATLoginItemHelper.xcodeproj; sourceTree = "<group>"; };
 		FACAC5101BFC28F000093B1B /* time_out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = time_out.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACAC5131BFC28F000093B1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FACAC5141BFC28F000093B1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,9 +158,19 @@
 			name = INPopoverController;
 			sourceTree = "<group>";
 		};
+		FA88F1DC1C04B28700799543 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA88F1E21C04B28700799543 /* ATLoginItemHelper.app */,
+				FA88F1E41C04B28700799543 /* ATLoginItemHelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FACAC5071BFC28F000093B1B = {
 			isa = PBXGroup;
 			children = (
+				FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */,
 				FA5AF69A1BFE2F7800548011 /* INPopoverController */,
 				FACAC5121BFC28F000093B1B /* time_out */,
 				FACAC5291BFC28F000093B1B /* time_outTests */,
@@ -202,10 +248,12 @@
 				FACAC50C1BFC28F000093B1B /* Sources */,
 				FACAC50D1BFC28F000093B1B /* Frameworks */,
 				FACAC50E1BFC28F000093B1B /* Resources */,
+				FA39D1B11C04BC500064C4E6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FAB4BA9E1C04CD8F00A8FEDE /* PBXTargetDependency */,
 			);
 			name = time_out;
 			productName = time_out;
@@ -259,6 +307,7 @@
 				TargetAttributes = {
 					FACAC50F1BFC28F000093B1B = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 5JNQF6HSBG;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -286,6 +335,12 @@
 			mainGroup = FACAC5071BFC28F000093B1B;
 			productRefGroup = FACAC5111BFC28F000093B1B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA88F1DC1C04B28700799543 /* Products */;
+					ProjectRef = FA88F1DB1C04B28700799543 /* ATLoginItemHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FACAC50F1BFC28F000093B1B /* time_out */,
@@ -294,6 +349,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FA88F1E21C04B28700799543 /* ATLoginItemHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ATLoginItemHelper.app;
+			remoteRef = FA88F1E11C04B28700799543 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA88F1E41C04B28700799543 /* ATLoginItemHelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ATLoginItemHelperTests.xctest;
+			remoteRef = FA88F1E31C04B28700799543 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FACAC50E1BFC28F000093B1B /* Resources */ = {
@@ -360,6 +432,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FAB4BA9E1C04CD8F00A8FEDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ATLoginItemHelper;
+			targetProxy = FAB4BA9D1C04CD8F00A8FEDE /* PBXContainerItemProxy */;
+		};
 		FACAC5281BFC28F000093B1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FACAC50F1BFC28F000093B1B /* time_out */;
@@ -457,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = time_out/time_out.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = time_out/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -470,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = time_out/time_out.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = time_out/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

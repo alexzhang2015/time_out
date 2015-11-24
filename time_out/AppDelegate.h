@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #include "MenuBarController.h"
 
+#define kATLoginItemHelperBundleID              @"com.alex.ATLoginItemHelper"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 // The repeating timer is a weak property.
