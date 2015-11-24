@@ -9,12 +9,14 @@
 #import "AppDelegate.h"
 
 #import <objc/runtime.h>
+#import <ServiceManagement/ServiceManagement.h>
 
 #define TIME_INTERVAL_SINCE_NOW 3600
 #define TIME_INTERVAL           3600
 
 @interface AppDelegate ()
 
+@property (atomic) BOOL launchedByHelper;
 
 @end
 
@@ -38,12 +40,23 @@
     
     // http://stackoverflow.com/questions/620841/how-to-hide-the-dock-icon
     [NSApp setActivationPolicy: NSApplicationActivationPolicyAccessory];
+    
+    
+    // register url listener
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self
+                                                       andSelector:@selector(getUrl:withReplyEvent:)
+                                                     forEventClass:kInternetEventClass
+                                                        andEventID:kAEGetURL];
 }
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     NSLog(@"applicationDidFinishLaunching");
+    
+    if (![self isLoginItemAlreadyEnabled:kATLoginItemHelperBundleID]) {
+        [self retryEnableLoginItem:1];
+    }
     
     NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:TIME_INTERVAL_SINCE_NOW];
     
@@ -58,6 +71,14 @@
     
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
+    
+    
+    if (self.launchedByHelper) {
+        self.launchedByHelper = NO;
+    }
+    else{
+        
+    }
     
 
 }
@@ -97,7 +118,57 @@
 - (IBAction)ok:(id)sender
 {
     NSLog(@"ok");
+    [self presentNotification];
 }
 
+
+- (void)retryEnableLoginItem:(unsigned int)sleepSeconds
+{
+    static int times = 3;
+    while (0 < times--) {
+        
+        sleep(sleepSeconds);
+        
+        if (!SMLoginItemSetEnabled((CFStringRef)kATLoginItemHelperBundleID, YES)) {
+            NSLog(@"Fail to enable memory clean auto login: %d times", 3-times);
+            [self retryEnableLoginItem:sleepSeconds*2];
+        }
+        break;
+    }
+    
+}
+
+
+- (BOOL)isLoginItemAlreadyEnabled:(NSString *)loginItemBundleID
+{
+    BOOL launch = NO;
+    CFArrayRef cfJobs = SMCopyAllJobDictionaries(kSMDomainUserLaunchd);
+    NSArray *jobs = [NSArray arrayWithArray:(__bridge NSArray *)cfJobs];
+    
+    CFRelease(cfJobs);
+    if([jobs count]){
+        for(NSDictionary *job in jobs){
+            if([job[@"Label"] isEqualToString:loginItemBundleID]){
+                launch = [job[@"OnDemand"] boolValue];
+                break;
+            }
+        }
+    }
+    return launch;
+}
+
+- (void)getUrl:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+{
+    NSLog(@"==> %s", __FUNCTION__);
+    
+    NSURL *url = [NSURL URLWithString:[[event paramDescriptorForKeyword:keyDirectObject] stringValue]];
+    NSLog(@"Got URL: %@", url);
+    
+    NSString *host = [url host];
+    NSString *path = [url path];
+    if ([host isEqualToString:@"launch"] && [path isEqualToString:@"/helper"]) {
+        self.launchedByHelper = YES;
+    }
+}
 
 @end
