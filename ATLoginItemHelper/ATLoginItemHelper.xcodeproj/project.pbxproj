@@ -37,7 +37,6 @@
 		3E86948F1AC28CD8008D292D /* ATLoginItemHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLoginItemHelperTests.m; sourceTree = "<group>"; };
 		3E8694991AC28E13008D292D /* ATLoginItemHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ATLoginItemHelper.entitlements; sourceTree = "<group>"; };
 		4361BFDC1B1BF7A60082DD69 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.strings"; sourceTree = "<group>"; };
-		52F3B20A1BA18892000E1640 /* ATLoginItemHelper Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATLoginItemHelper Pro-Info.plist"; sourceTree = "<group>"; };
 		FA88F1E71C04B69A00799543 /* TMBundleID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBundleID.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +93,6 @@
 		3E8694791AC28CD8008D292D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				52F3B20A1BA18892000E1640 /* ATLoginItemHelper Pro-Info.plist */,
 				3E86947A1AC28CD8008D292D /* Info.plist */,
 				3E86947E1AC28CD8008D292D /* main.m */,
 			);
@@ -163,7 +161,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = trendmicro;
+				ORGANIZATIONNAME = alex;
 				TargetAttributes = {
 					3E8694751AC28CD8008D292D = {
 						CreatedOnToolsVersion = 6.2;
